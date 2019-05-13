@@ -33,7 +33,7 @@ module.exports = (env, argv) => {
     let config = {
         entry: {
             app: [
-                './src/app.js',
+                './src/js/app.js',
                 './src/scss/app.scss'
             ]
         },
