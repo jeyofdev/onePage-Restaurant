@@ -1,6 +1,6 @@
-/* ===========================
-			      COLORS
-=========================== */
+/* ============
+    COLORS
+============ */
 $white:     #fff !default;
 $white-100: #fdfeff !default;
 
@@ -14,9 +14,9 @@ $secondary: $orange !default;
 
 
 
-/* ===========================
-			      FONTS
-=========================== */
+/* ===========
+    FONTS
+=========== */
 $font-family-sans-serif:        'Montserrat', sans-serif !default;
 $font-family-base:              $font-family-sans-serif !default;
 
@@ -31,18 +31,18 @@ $font-size-25:      $font-size-base * 2.5 !default;
 
 
 
-/* ===========================
-			    TRANSITION
-=========================== */
+/* ================
+    TRANSITION
+================ */
 $duration-slow: .5s;
 $duration-fast: .25s;
 $duration-ultrafast: .15s;
 
 
 
-/* ===========================
-			  BURGER BUTTON
-=========================== */
+/* ===================
+    BURGER BUTTON
+=================== */
 $burger-span-color: $white-100;
 $burger-span-size: 1.5em;
 $burger-span-height: 2px;
@@ -52,9 +52,9 @@ $burger-span-rotation: 135deg;
 
 
 
-/* ===========================
-			    NAV OVERLAY
-=========================== */
+/* =================
+    NAV OVERLAY
+================= */
 $nav-overlay-background: $black;
 $nav-overlay-links-fontsize: $font-size-2;
 $nav-overlay-links-color: $white;

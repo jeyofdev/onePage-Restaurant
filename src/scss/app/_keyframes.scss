@@ -1,0 +1,45 @@
+@keyframes fadeInLeft {
+  from { 
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes widthLeftToRight {
+  from {
+    transform-origin: center left;
+    transform: scale3d(0, 1, 1)
+  }
+
+  to {
+    transform-origin: center left;
+    transform: scale3d(.8, 1, 1)
+  }
+}
+
+

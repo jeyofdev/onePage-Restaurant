@@ -1,0 +1,4 @@
+// calculate the delay of a transition or animation for child elements
+@function calculDelay($child, $duration, $delay){
+  @return (($child - 1) * $delay) + $duration;
+}

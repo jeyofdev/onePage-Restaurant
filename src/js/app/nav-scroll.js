@@ -9,7 +9,7 @@ export function navScroll () {
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']')
       if (target.length) {
         $('html, body').animate({
-          scrollTop: (target.offset().top - 56)
+          scrollTop: (target.offset().top)
         }, 1000, 'easeInOutExpo')
         return false
       }
@@ -23,7 +23,6 @@ export function navScroll () {
 
   // activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
-    target: '#mainNav',
-    offset: 56
+    target: '#mainNav'
   })
 }

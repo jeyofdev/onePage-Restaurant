@@ -1,6 +1,6 @@
-/* -----------------------------
-         TOGGLE BUTTON
------------------------------ */
+/* ===================
+    TOGGLE BUTTON
+=================== */
 .navbar-light .navbar-toggler {
   position: relative;
   width: $burger-span-size;
@@ -13,9 +13,9 @@
 
 
 
-/* -----------------------------
-       TOGGLE BUTTON BAR
------------------------------ */
+/* =======================
+    TOGGLE BUTTON BAR
+======================= */
 .navbar-light .navbar-toggler {
   span, &::after, &::before {
     display: block;
@@ -49,9 +49,9 @@
 
 
 
-/* -----------------------------
+/* ==============================
     TOGGLE BUTTON BAR ACTIVE
------------------------------ */
+============================== */
 .navbar-light .navbar-toggler.is-active {
   span {
     width: 0;

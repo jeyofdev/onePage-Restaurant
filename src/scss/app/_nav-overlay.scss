@@ -1,0 +1,54 @@
+/* =============
+    OVERLAY
+============= */
+.navbar-collapse{
+  display: flex;
+  align-items: center;
+  background-color: $nav-overlay-background;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  &.overlay {
+    position: fixed;
+    z-index: 1;
+  
+    .overlay-content {
+      position: relative;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+
+
+/* ===================
+    OVERLAY LINKS
+=================== */
+.navbar-light .overlay-content {
+  .nav-link {
+    opacity: 0;
+    transition: all $duration-fast;
+  }
+
+  li{
+    .nav-link {
+      animation: fadeInUp $duration-ultrafast .5s forwards;
+
+      &:hover{
+        animation: fadeInUp $duration-ultrafast forwards;
+      }
+    }
+
+    &:nth-child(2) .nav-link { animation-delay: calculDelay(2, .5s, $duration-ultrafast); }
+    &:nth-child(3) .nav-link { animation-delay: calculDelay(3, .5s, $duration-ultrafast); }
+    &:nth-child(4) .nav-link { animation-delay: calculDelay(4, .5s, $duration-ultrafast); }
+    &:nth-child(5) .nav-link { animation-delay: calculDelay(5, .5s, $duration-ultrafast); }
+    &:nth-child(6) .nav-link { animation-delay: calculDelay(6, .5s, $duration-ultrafast); }
+    &:nth-child(7) .nav-link { animation-delay: calculDelay(7, .5s, $duration-ultrafast); }
+    &:nth-child(8) .nav-link { animation-delay: calculDelay(8, .5s, $duration-ultrafast); }
+  }
+}
