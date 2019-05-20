@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+// custom scss files from libraries
+@import "lib/bootstrap";
+
+
 // scss file of the app
 @import "app/custom";
-
-// scss files from libraries
-@import "~bootstrap/scss/bootstrap";
+@import "app/nav-toggle-button";

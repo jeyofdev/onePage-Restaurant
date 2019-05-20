@@ -1,3 +1,7 @@
+*, *::before, *::after, *:focus, *:active, *:hover, *:visited{
+  outline: none !important;
+}
+
 header {
   padding: 156px 0 100px;
   min-height: 100vh;

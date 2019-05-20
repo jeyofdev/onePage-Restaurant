@@ -1,0 +1,61 @@
+/* ===========================
+			      COLORS
+=========================== */
+$white:     #fff !default;
+$white-100: #fdfeff !default;
+
+$black:     #000 !default;
+$black-100: #121212 !default;
+$black-200: #1b1b1b !default;
+
+$orange:  #e4bb7a !default;
+$primary: $orange !default;
+$secondary: $orange !default;
+
+
+
+/* ===========================
+			      FONTS
+=========================== */
+$font-family-sans-serif:        'Montserrat', sans-serif !default;
+$font-family-base:              $font-family-sans-serif !default;
+
+$font-size-base:    1rem !default; // 16px
+$font-size:         $font-size-base !default;
+$font-size-0875:    $font-size-base * .875 !default;
+$font-size-125:     $font-size-base * 1.25 !default;
+$font-size-15:      $font-size-base * 1.5 !default;
+$font-size-175:     $font-size-base * 1.75 !default;
+$font-size-2:       $font-size-base * 2 !default;
+$font-size-25:      $font-size-base * 2.5 !default;
+
+
+
+/* ===========================
+			    TRANSITION
+=========================== */
+$duration-slow: .5s;
+$duration-fast: .25s;
+$duration-ultrafast: .15s;
+
+
+
+/* ===========================
+			  BURGER BUTTON
+=========================== */
+$burger-span-color: $white-100;
+$burger-span-size: 1.5em;
+$burger-span-height: 2px;
+$burger-span-speed: 0.33s;
+$burger-span-easing: cubic-bezier(1, .22, .35, 1.4);
+$burger-span-rotation: 135deg;
+
+
+
+/* ===========================
+			    NAV OVERLAY
+=========================== */
+$nav-overlay-background: $black;
+$nav-overlay-links-fontsize: $font-size-2;
+$nav-overlay-links-color: $white;
+$nav-overlay-links-hover-color: $white;

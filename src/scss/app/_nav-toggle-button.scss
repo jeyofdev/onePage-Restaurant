@@ -1,0 +1,71 @@
+/* -----------------------------
+         TOGGLE BUTTON
+----------------------------- */
+.navbar-light .navbar-toggler {
+  position: relative;
+  width: $burger-span-size;
+  height: calc(#{$burger-span-size} - #{$burger-span-height});
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+
+/* -----------------------------
+       TOGGLE BUTTON BAR
+----------------------------- */
+.navbar-light .navbar-toggler {
+  span, &::after, &::before {
+    display: block;
+    background-image: none;
+    background: $burger-span-color;
+    width: 100%;
+    height: $burger-span-height;
+    position: absolute;
+    transition: $burger-span-speed $burger-span-easing;
+  }
+
+  span {
+    top: calc((#{$burger-span-size} - #{$burger-span-height} * 2) / 2);
+  }
+
+  &:before {
+    content: "";
+    top: 0;
+  }
+
+  &:after {
+    content: "";
+    top: calc(#{$burger-span-size} - (#{$burger-span-height * 2}));
+  }
+}
+
+.navbar-toggler {
+  &:hover:after { transform: translateY($burger-span-height); }
+  &:hover:before { transform: translateY(($burger-span-height) * -1); }
+}
+
+
+
+/* -----------------------------
+    TOGGLE BUTTON BAR ACTIVE
+----------------------------- */
+.navbar-light .navbar-toggler.is-active {
+  span {
+    width: 0;
+  }
+
+  &:after, &:before {
+    top: calc((#{$burger-span-size} - #{$burger-span-height} * 2) / 2);
+  }
+
+  &:after {
+    transform: rotate($burger-span-rotation);
+  }
+
+  &:before {
+    transform: rotate($burger-span-rotation * -1);
+  }
+}
