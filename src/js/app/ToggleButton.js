@@ -1,14 +1,8 @@
-export function toggleButton () {
-  let toggleButton = new ToggleButton()
-  toggleButton.init()
-}
-
 /**
  * Manage the responsive nav
  */
-class ToggleButton {
+export class ToggleButton {
   constructor () {
-    this.windowWidth = window.innerWidth
     this.button = document.querySelector('#navToggle') // responsive button
     this.navbarCollapse = document.querySelector('#navbarResponsive')
     this.navbarNav = document.querySelector('.navbar-nav')
@@ -20,9 +14,8 @@ class ToggleButton {
    */
   init () {
     this.collapse()
-    this.resize()
 
-    if (this.windowWidth >= 992) {
+    if (window.innerWidth >= 992) {
       this.setOverlay(false)
     } else {
       this.setOverlay()
@@ -31,6 +24,21 @@ class ToggleButton {
           this.button.classList.remove('is-active')
         })
       })
+    }
+  }
+
+  /**
+   * disable responsive menu button on large screens
+   *
+   */
+  resize () {
+    if (window.innerWidth >= 992) {
+      this.button.classList.remove('is-active')
+      this.button.classList.add('collapsed')
+      this.setOverlay(false)
+      this.navbarCollapse.classList.remove('show')
+    } else {
+      this.setOverlay(true)
     }
   }
 
@@ -55,25 +63,6 @@ class ToggleButton {
         this.navbarCollapse.classList.add('hide')
       }
     })
-  }
-
-  /**
-   * disable responsive menu button on large screens
-   *
-   */
-  resize () {
-    window.onresize = () => {
-      this.windowWidth = window.innerWidth
-
-      if (this.windowWidth >= 992) {
-        this.button.classList.remove('is-active')
-        this.button.classList.add('collapsed')
-        this.setOverlay(false)
-        this.navbarCollapse.classList.remove('show')
-      } else {
-        this.setOverlay(true)
-      }
-    }
   }
 
   /**
