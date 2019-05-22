@@ -5,10 +5,15 @@ import $ from 'jquery'
  * manage the smooth scrolling by clicking on the links of the navbar
  */
 export class NavScroll {
-  constructor () {
-    this.body = $('body')
-    this.link = $('.js-scroll-trigger')
-    this.navbarCollapse = $('.navbar-collapse')
+  /**
+   * @param {string} target the parent element that use the smoothScrolling
+   * @param {string} navbarCollapse the navbar collapse
+   * @param {string} link the links that use the smoothScrolling
+   */
+  constructor (target, navbarCollapse, link) {
+    this.target = target
+    this.navbarCollapse = $(navbarCollapse)
+    this.link = $(link)
   }
 
   /**
@@ -51,8 +56,8 @@ export class NavScroll {
    * activate scrollspy to add active class to navbar items on scroll
    */
   scrollspy () {
-    this.body.scrollspy({
-      target: '#mainNav'
+    $('body').scrollspy({
+      target: this.target
     })
   }
 }

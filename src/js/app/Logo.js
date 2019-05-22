@@ -2,8 +2,14 @@
  * manage the position of the logo
  */
 export class Logo {
+  /**
+   * @param {string} navbar the class of the navbar
+   * @param {string} listLinks the class of the element that contains the links
+   * @param {string} newLink the tag of the element created for large screens
+   * @param {string} className the class of the element created
+   */
   constructor (navbar, listLinks, newLink, className) {
-    this.navbar = document.querySelector(navbar) // navbar
+    this.navbar = document.querySelector(navbar)
     this.listLinks = document.querySelector(listLinks) // the element that contains the links
     this.newLink = document.createElement(newLink)
     this.newLink.className = className

@@ -65,7 +65,12 @@
 @media (min-width: 992px){
   .navbar{
     padding: 0 1rem;
-    margin-top: 1.5em;
+    margin-top: 2.5em;
+    transition: all 1s;
+
+    &.top-nav-collapse{
+      margin-top: 1em;
+    }
   }
 
   .navbar-collapse{

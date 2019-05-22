@@ -2,6 +2,7 @@
 import { NavScroll } from '@js/app/NavScroll.js'
 import { ToggleButton } from '@js/app/ToggleButton'
 import { Logo } from '@js/app/Logo'
+import { TopNav } from '@js/app/TopNav'
 
 // import libraries
 require('jquery.easing')
@@ -10,14 +11,17 @@ require('jquery.easing')
 require('@js/vendor/bootstrap.js')
 
 // code js
-let navScroll = new NavScroll()
+let navScroll = new NavScroll('#mainNav', '#navbarResponsive', '.js-scroll-trigger')
 navScroll.init()
 
-let toggleButton = new ToggleButton()
+let toggleButton = new ToggleButton('#navToggle', '#navbarResponsive', '.navbar-nav', '.js-scroll-trigger')
 toggleButton.init()
 
-let logo = new Logo('.navbar .container', '.navbar-nav', 'li', 'nav-item')
+let logo = new Logo('#mainNav .container', '.navbar-nav', 'li', 'nav-item')
 logo.init()
+
+let topNav = new TopNav('#mainNav', 50, 100)
+topNav.init()
 
 /**
  * allows to use an event several times

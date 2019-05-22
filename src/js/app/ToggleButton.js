@@ -2,11 +2,17 @@
  * Manage the responsive nav
  */
 export class ToggleButton {
-  constructor () {
-    this.button = document.querySelector('#navToggle') // responsive button
-    this.navbarCollapse = document.querySelector('#navbarResponsive')
-    this.navbarNav = document.querySelector('.navbar-nav')
-    this.links = document.querySelectorAll('.js-scroll-trigger') // nav links
+  /**
+   * @param {string} button the responsive button
+   * @param {string} navbarCollapse the navbar collapse
+   * @param {string} navbarNav the parent element container links
+   * @param {string} links the links of the nav
+   */
+  constructor (button, navbarCollapse, navbarNav, links) {
+    this.button = document.querySelector(button)
+    this.navbarCollapse = document.querySelector(navbarCollapse)
+    this.navbarNav = document.querySelector(navbarNav)
+    this.links = document.querySelectorAll(links)
   }
 
   /**
