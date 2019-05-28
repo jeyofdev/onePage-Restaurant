@@ -58,6 +58,7 @@
   }
 
   &:after, &:before {
+    background: $white-100;
     top: calc((#{$burger-span-size} - #{$burger-span-height} * 2) / 2);
   }
 

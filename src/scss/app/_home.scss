@@ -1,0 +1,251 @@
+/* ==========
+    HOME
+========== */
+header {
+  min-height:  $header-min-height;
+  padding: 0;
+  margin-top: calculNavHeight(em(49), 1, .5);
+
+  .container {
+    min-height:  $header-min-height;
+    max-width: none !important;
+    padding: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  header {
+    min-height: $header-min-height-lg;
+    margin-top: calculNavHeight(em(65), 2.5, 0);
+
+    > .container {
+      min-height: $header-min-height-lg;
+    }
+  }
+}
+
+
+
+/* ===============
+    CAROUSEL
+=============== */
+header .home-carousel {
+  overflow: hidden;
+}
+
+header .home-carousel .carousel {
+  @include flex(center);
+  height:  $header-min-height;
+}
+
+@include media-breakpoint-up(md) {
+  header .home-carousel .carousel {
+    height: calc(100vh - (49px + (1em + .5em)) - (1.6875em + (3.125em * 2)));
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  header .home-carousel .carousel {
+    height: calc(100vh - (65px + 2.5em) - (1.6875em + (3.125em * 2)));
+  }
+}
+
+@media (min-width: 768px) and (max-height: 450px){
+  header .home-carousel .carousel {
+    height: $header-min-height;
+  }
+}
+
+
+
+
+/* ====================
+    CAROUSEL SLIDE
+==================== */
+header .home-carousel .carousel .carousel-inner .carousel-item {
+  &:first-child { @include backgroundSlider('../img/slider-home/bg-1.jpg', no-repeat, center, cover); }
+  &:nth-child(2) { @include backgroundSlider('../img/slider-home/bg-2.jpg', no-repeat, center, cover); }
+  &:nth-child(3) { @include backgroundSlider('../img/slider-home/bg-3.jpg', no-repeat, center, cover); }
+  &:nth-child(4) { @include backgroundSlider('../img/slider-home/bg-4.jpg', no-repeat, center, cover); }
+  &:last-child { @include backgroundSlider('../img/slider-home/bg-5.jpg', no-repeat, center, cover); }
+}
+
+
+
+/* ======================
+    CAROUSEL CONTROL
+====================== */
+header .home-carousel .carousel .carousel-control {
+  position: absolute;
+  @include flex(stretch, space-between);
+  width: 100%;
+
+  > a {
+    position: relative;
+    background: transparent;
+    font-size: 1.6875em;
+    opacity: 1;
+    cursor: pointer;
+
+    span{
+      text-shadow: 0.25px 0.5px 0px $black;
+    }
+  }
+}
+
+
+
+/* ====================
+    CAROUSEL DOTS
+==================== */
+header .home-carousel .carousel .carousel-indicators {
+  margin: 1em 0 2em 0;
+  @include flex(center);
+
+  li {
+    background: transparent;
+    width: $carousel-indicators-li-size;
+    height: $carousel-indicators-li-size;
+    border: 2px solid $white;
+    border-radius: 100%;
+    opacity: 1;
+
+    &.active {
+      background: $primary;
+      width: $carousel-indicators-li-active-size;
+      height: $carousel-indicators-li-active-size;
+      border: none;
+    }
+  }
+}
+
+
+
+/* ======================
+    CAROUSEL CONTENT
+====================== */
+header .home-carousel .carousel .carousel-inner .carousel-item {
+  overflow: auto;
+
+  .container {
+    @include flex(center);
+
+    .carousel-caption {
+      width: auto;
+      bottom: auto;
+      padding-left: 0;
+      padding-right: 0;
+      left: 11.5%;
+      right: 11.5%;
+    }
+  }
+
+  @media (max-height: 576px) {
+    .container {
+      @include flex(flex-start);
+    }
+  }
+}
+
+header .carousel-caption {
+  h1 span, p, a {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+  }
+}
+
+header .carousel-caption {
+  h1 span{
+    &:first-child{
+      font-family: $font-family-secondary;
+      font-size: .85em;
+      text-shadow: 0.25px 0.5px 0px $black;
+      animation-delay: .5s;
+    }
+
+    &:last-child{
+      display: block;
+      font-family: $font-family-sans-serif;
+      font-size: .8em;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-top: -.1em;
+      text-shadow: 1px 1px 1px $black;
+      animation-delay: .75s;
+    }
+  }
+}
+
+header .carousel-caption {
+  p{
+    font-family: $font-family-serif;
+    font-size: .9375em;
+    line-height: 1.625em;
+    margin: 2.9375em 0;
+    text-shadow: 1px 1px 1px $black;
+    animation-delay: 1s;
+  }
+
+  .btn {
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-base;
+    text-transform: uppercase;
+    padding: 1em 3.0625em;
+    border-radius: 0;
+    animation-delay: 1.5s;
+
+    &:focus, &:active {
+      box-shadow: none;
+    }
+  }
+
+  @media (max-height: 576px) {
+    .btn {
+      margin-bottom: 3em;
+    }
+  }
+}
+
+
+
+/* ========
+    RS
+======== */
+header .home-social {
+  @include flex(center, center);
+  padding: 3.125em 0;
+
+  ul {
+    @include flex(center, center);
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0 1.5625em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      font-size: 1.125em;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  header .home-social {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-height: 450px){
+  header .home-social {
+    display: none;
+  }
+}

@@ -1,4 +1,86 @@
+/// reset css
+///
+/// @param $outline property value outline
+/// @param $listStyle property value list-style
+///
+@mixin reset($outline: none, $listStyle: none) {
+  *, *::before, *::after, *:focus, *:active, *:hover, *:visited{
+    outline: $outline !important;
+  }
+  
+  ul, li, ol {
+    list-style: $listStyle;
+  }
+}
+
+
+
+/// convert px to rem
+///
+/// @param $size value in px to convert
+/// @param $base conversion base (default 16px = 1rem)
+@function rem($size, $base: 16){
+  @return 1rem * $size / $base;
+}
+
+
+
+/// convert px to em
+///
+/// @param $size value in px to convert
+/// @param $base conversion base (default 16px = 1em)
+@function em($size, $base: 16){
+  @return 1em * $size / $base;
+}
+
+
 // calculate the delay of a transition or animation for child elements
+/// 
+/// @param $child the index of the child element
+/// @param $duration the duration of a transition or animation
+/// @param $delay the delay
 @function calculDelay($child, $duration, $delay){
   @return (($child - 1) * $delay) + $duration;
+}
+
+
+
+/// calculate the height of the nav
+///
+/// @param $height the height of the nav
+/// @param $paddingTop the padding-top of the nav
+/// @param $paddingBottom the padding-bottom of the nav
+@function calculNavHeight($height, $paddingTop, $paddingBottom){
+  @return $height + ($paddingTop + $paddingBottom);
+}
+
+
+
+/// set the background image
+///
+/// @param $url the path of the image
+/// @param $repeat value of the background-repeat property
+/// @param $position value of the background-position property
+/// @param $size value of the background-size property
+@mixin backgroundSlider($url, $repeat, $position, $size){
+  background: url($url) $repeat $position; 
+  background-size: $size;
+}
+
+
+
+/// alignment of elements with flexbox
+///
+/// @param $alignItems value of the align-items property
+/// @param $justifyContent value of the justify-content property
+@mixin flex($alignItems: stretch, $justifyContent: flex-start, ){
+  display: flex;
+
+  @if $alignItems != stretch {
+    align-items: $alignItems;
+  }
+
+  @if $justifyContent != flex-start {
+    justify-content: $justifyContent;
+  }
 }

@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+//custom mixins
+@import "app/mixins";
 
 
 // custom scss files from libraries
 @import "lib/bootstrap";
+@import "lib/font-awesome";
 
 
 // scss file of the app
+@import "app/font-face";
 @import "app/keyframes";
-@import "app/mixins";
 @import "app/custom";
 @import "app/nav";
 @import "app/nav-toggle-button";
 @import "app/nav-overlay";
+@import "app/home";

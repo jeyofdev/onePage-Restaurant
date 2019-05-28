@@ -4,6 +4,7 @@
 .navbar{
   padding: 1em 1em .5em 1em;
   justify-content: space-between;
+  box-shadow: 0px 0px 1.25em .2em rgba(0, 0, 0, .5)
 }
 
 
@@ -46,7 +47,7 @@
 /* ================
     RESPONSIVE
 ================ */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width:768px) and (max-width: 992px){
   .collapse:not(.show){
     display: none !important;
   }
@@ -65,11 +66,11 @@
 @media (min-width: 992px){
   .navbar{
     padding: 0 1rem;
-    margin-top: 2.5em;
+    padding-top: 2.5em;
     transition: all 1s;
 
     &.top-nav-collapse{
-      margin-top: 1em;
+      padding-top: 1em;
     }
   }
 
@@ -105,7 +106,6 @@
   .navbar-expand-md .navbar-nav{
     width: 100%;
     max-width: 950px;
-    display: flex;
-    justify-content: space-between;
+    @include flex(stretch, space-between);
   }
 }
