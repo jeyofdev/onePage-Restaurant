@@ -1,0 +1,23 @@
+/* =============
+    SECTION
+============= */
+body > section {
+  min-height: 100vh;
+  @include flex(center);
+
+  > .container {
+    margin-top: calculNavHeight(rem(49), 1, .5);
+    margin-bottom: 2.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  section {
+    > .container {
+      margin-top: calculNavHeight(rem(65), 2.5, 0);
+      margin-bottom: 5.9375rem;
+      padding-top: 0;
+    }
+  }
+}

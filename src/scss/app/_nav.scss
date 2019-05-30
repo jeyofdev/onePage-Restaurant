@@ -2,10 +2,11 @@
     NAVBAR
 ============ */
 .navbar{
-  padding: 1em 1em .5em 1em;
+  padding: 1rem 1rem .5rem 1rem;
   justify-content: space-between;
-  box-shadow: 0px 0px 1.25em .2em rgba(0, 0, 0, .5)
+  box-shadow: 0px 0px 1.25rem .2rem rgba(0, 0, 0, .5)
 }
+
 
 
 
@@ -23,7 +24,7 @@
     LINKS
 =========== */
 .navbar-light .navbar-nav li{
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 
   &:last-child{
     margin-bottom: 0;
@@ -34,11 +35,22 @@
   font-family: $font-family-base;
   color: $white-100;
   font-size: $font-size-2;
-  line-height: 30px;
+  line-height: 1.875rem;
   text-transform: uppercase;
 
   &.active, &:hover{
     color: $secondary;
+  }
+}
+
+@media (max-width: 992px) and (max-height: 475px) {
+  .navbar-light .navbar-nav li{
+    margin-bottom: 0;
+  }
+
+  .navbar-light .navbar-nav li .nav-link{
+    font-size: $font-size-175;
+    padding: .35rem 0;
   }
 }
 
@@ -47,13 +59,13 @@
 /* ================
     RESPONSIVE
 ================ */
-@media (min-width:768px) and (max-width: 992px){
+@include media-breakpoint-only(md) {
   .collapse:not(.show){
     display: none !important;
   }
 }
 
-@media (max-width: 991px){
+@include media-breakpoint-down(md) {
   .navbar-expand-md .navbar-toggler{
     display: block;
   }
@@ -63,14 +75,14 @@
   }
 }
 
-@media (min-width: 992px){
+@include media-breakpoint-up(lg) {
   .navbar{
     padding: 0 1rem;
-    padding-top: 2.5em;
+    padding-top: 2.5rem;
     transition: all 1s;
 
     &.top-nav-collapse{
-      padding-top: 1em;
+      padding-top: 1rem;
     }
   }
 
@@ -83,7 +95,7 @@
   .navbar-light .navbar-nav li .nav-link{
     color: $black-200;
     font-size: $font-size;
-    line-height: 30px;
+    line-height: 1.875rem;
 
     &:hover{
       color: $black-200;
@@ -97,7 +109,7 @@
         display: block;
         background: $secondary;
         height: 3px;
-        margin: .25em auto 0 0;
+        margin: .25rem auto 0 0;
         animation: widthLeftToRight 1s forwards;
       }
     }

@@ -1,0 +1,32 @@
+/* ==================
+    SECTION TEXT
+================== */
+section h1{
+  span{
+    &:first-child{
+      font-family: $font-family-secondary;
+      font-size: 3.125rem;
+      line-height: 1.625rem;
+      text-shadow: 0.25px 0.5px 0px $black;
+    }
+
+    &:last-child{
+      display: block;
+      font-family: $font-family-sans-serif;  
+      font-size: 2.25rem;
+      font-weight: bold;
+      line-height: 1.625rem;
+      letter-spacing: 120;
+      text-transform: uppercase;
+      margin-top: .45rem;
+      text-shadow: 1px 1px 1px $black;
+    }
+  }
+}
+
+section p{
+  font-family: $font-family-serif;
+  font-size: .9375rem;
+  line-height: 1.625rem;
+  text-shadow: 1px 1px 1px $black;
+}

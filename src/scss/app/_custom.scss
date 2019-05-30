@@ -1,14 +1,1 @@
 @include reset();
-
-section {
-  padding: 150px 0;
-  min-height: 100vh;
-
-  &#about{ background: rgb(148, 214, 214) !important; }
-  &#menu{ background: rgb(166, 167, 228) !important; }
-  &#opening-hours{ background: rgb(214, 139, 192) !important; }
-  &#staff{ background: rgb(214, 213, 138) !important; }
-  &#booking{ background: rgb(202, 129, 141) !important; }
-  &#testimonial{ background: rgb(139, 150, 214) !important; }
-  &#contact{ background: rgb(154, 218, 151) !important; }
-}

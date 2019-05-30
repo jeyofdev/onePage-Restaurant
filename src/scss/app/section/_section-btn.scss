@@ -1,0 +1,15 @@
+/* =================
+    SECTION BTN
+================= */
+section .btn {
+  font-family: $font-family-sans-serif;
+  font-size: .9375rem;
+  text-transform: uppercase;
+  line-height: 1.875rem;
+  padding: 1rem 1.875rem;
+  border-radius: 0;
+
+  &:focus, &:active {
+    box-shadow: none;
+  }
+}

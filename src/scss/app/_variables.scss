@@ -3,10 +3,16 @@
 ============ */
 $white:     #fff !default;
 $white-100: #fdfeff !default;
+$white-200: #e2e2e2 !default;
+$white-300: #eeeeee !default;
 
 $black:     #000 !default;
 $black-100: #121212 !default;
 $black-200: #1b1b1b !default;
+
+$gray-100: #1a1a1a !default;
+$gray-200: #292928 !default;
+$gray-300: #3f3f3f !default;
 
 $orange:  #e4bb7a !default;
 $primary: $orange !default;
@@ -14,6 +20,8 @@ $secondary: $orange !default;
 $dark:      $black-100 !default;
 $dark-200:  $black-200 !default;
 $light:     $white-100 !default;
+$light-200: $white-200 !default;
+$light-300: $white-300 !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -21,7 +29,12 @@ $theme-colors: map-merge(
     "primary":    $primary,
     "dark":       $dark,
     "dark-200":   $dark-200,
-    "light":      $light
+    "light":      $light,
+    "light-200":  $light-200,
+    "light-300":  $light-300,
+    "gray-100":   $gray-100,
+    "gray-200":   $gray-200,
+    "gray-300":   $gray-300,
   ),
   $theme-colors
 );
@@ -60,7 +73,7 @@ $duration-ultrafast: .15s;
     BURGER BUTTON
 =================== */
 $burger-span-color: $black;
-$burger-span-size: 1.5em;
+$burger-span-size: 1.5rem;
 $burger-span-height: 2px;
 $burger-span-speed: 0.33s;
 $burger-span-easing: cubic-bezier(1, .22, .35, 1.4);
@@ -81,13 +94,21 @@ $nav-overlay-links-hover-color: $white;
 /* =============
     HEADER
 ============= */
-$header-min-height: calc(100vh - (49px + (1em + .5em)));
-$header-min-height-lg: calc(100vh - (65px + 2.5em));
+$header-min-height: calc(100vh - #{calculNavHeight(rem(49), 1, .5)});
+$header-min-height-lg: calc(100vh - #{calculNavHeight(rem(65), 2.5, 0)});
 
 
 
 /* =============
     CAROUSEL
 ============= */
-$carousel-indicators-li-size: .563em;
-$carousel-indicators-li-active-size: .938em;
+$carousel-indicators-li-size: .563rem;
+$carousel-indicators-li-active-size: .938rem;
+$carousel-control-link-font-size: 1.6875rem;
+
+
+
+/* =================
+    HOME SOCIAL
+================= */
+$home-social-padding-top: 3.125rem;

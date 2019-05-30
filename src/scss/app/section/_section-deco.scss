@@ -1,0 +1,8 @@
+/* ==================
+    SECTION DECO
+================== */
+section .deco {
+  @include backgroundImage('../img/arrow.png', no-repeat, center, auto);
+  height: 1rem;
+  margin: 2.8125rem 0;
+}
