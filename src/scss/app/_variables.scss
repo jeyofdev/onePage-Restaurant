@@ -13,6 +13,7 @@ $black-200: #1b1b1b !default;
 $gray-100: #1a1a1a !default;
 $gray-200: #292928 !default;
 $gray-300: #3f3f3f !default;
+$gray-400: #4d4d4d !default;
 
 $orange:  #e4bb7a !default;
 $primary: $orange !default;
@@ -35,6 +36,7 @@ $theme-colors: map-merge(
     "gray-100":   $gray-100,
     "gray-200":   $gray-200,
     "gray-300":   $gray-300,
+    "gray-400":   $gray-400
   ),
   $theme-colors
 );
@@ -112,3 +114,20 @@ $carousel-control-link-font-size: 1.6875rem;
     HOME SOCIAL
 ================= */
 $home-social-padding-top: 3.125rem;
+
+
+
+/* =============
+    SECTION 
+============= */
+$section-container-padding-top: 2.5rem;
+$section-container-padding-bottom: $section-container-padding-top;
+$section-container-padding-top-lg: 5.625rem;
+$section-container-padding-bottom-lg: $section-container-padding-top-lg;
+
+
+
+/* =====================
+    SECTION WELCOME
+===================== */
+$welcome-content-max-width-lg: calc(33.33333% + (2 * 15px));

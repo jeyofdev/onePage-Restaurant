@@ -1,0 +1,40 @@
+/* =============
+    SECTION
+============= */
+body > section {
+  // min-height: 100vh;
+  @include flex(center);
+
+  > .container {
+    margin-top: calculNavHeight(rem(49), 1, .5);
+    margin-bottom: 0;
+    padding-top: $section-container-padding-top;
+    padding-bottom: $section-container-padding-bottom;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  body > section {
+    > .container {
+      padding-top: $section-container-padding-top-lg;
+      padding-bottom: $section-container-padding-bottom-lg;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-height: 576px) {
+  body > section {
+    > .container {
+      padding-top: $section-container-padding-top;
+      padding-bottom: $section-container-padding-bottom;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body > section {
+    > .container {
+      margin-top: calculNavHeight(rem(65), 2.5, 0);
+    }
+  }
+}
