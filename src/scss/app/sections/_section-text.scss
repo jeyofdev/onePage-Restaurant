@@ -2,6 +2,8 @@
     SECTION TEXT
 ================== */
 section h1{
+  margin: 0; 
+  
   span{
     &:first-child{
       font-family: $font-family-secondary;

@@ -6,7 +6,7 @@ section .btn {
   font-size: .9375rem;
   text-transform: uppercase;
   line-height: 1.875rem;
-  padding: 1rem 1.875rem;
+  padding: $button-cta-padding;
   border-radius: 0;
 
   &:focus, &:active {

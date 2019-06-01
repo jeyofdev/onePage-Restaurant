@@ -190,7 +190,7 @@ header .carousel-caption {
     font-family: $font-family-sans-serif;
     font-size: $font-size-base;
     text-transform: uppercase;
-    padding: 1rem 3.0625rem;
+    padding: $button-cta-padding;
     border-radius: 0;
     animation-delay: 1.5s;
 

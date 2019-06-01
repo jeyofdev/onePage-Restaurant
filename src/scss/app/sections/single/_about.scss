@@ -1,0 +1,33 @@
+/* ===================
+    ABOUT SECTION
+=================== */
+.section-about {
+  @include backgroundImage('../img/bg-about-big.jpg', no-repeat, center top, cover);
+}
+
+
+
+
+/* ===================
+    ABOUT CONTENT
+=================== */
+.section-about .welcome-content {
+  h1 span{
+    &:first-child {
+      font-size: 3.125rem;
+    }
+
+    &:last-child {
+      line-height: 1.625rem;
+      letter-spacing: normal;
+    }
+  }
+
+  .deco {
+    background-position: left;
+  }
+
+  p {
+    margin-bottom: 3.125rem;
+  }
+}
