@@ -159,6 +159,7 @@
 .section-menu .row .menu-single .card {
   @include flex(center);
   flex-direction: row;
+  background: transparent;
   padding: 3.4375rem 2.5rem 3.125rem;
   border: 1px solid $primary;
   border-radius: 0;
@@ -205,9 +206,9 @@
 
 
 
-/* =======================
-    MENU CONTENT TEXT
-======================= */
+/* =============
+    MENU TEXT
+================ */
 .section-menu .menu-single .card-body {
   text-align: center;
   padding: 0;

@@ -5,6 +5,7 @@ $white:     #fff !default;
 $white-100: #fdfeff !default;
 $white-200: #e2e2e2 !default;
 $white-300: #eeeeee !default;
+$white-400: #e0e0e0 !default;
 
 $black:     #000 !default;
 $black-100: #121212 !default;
@@ -12,7 +13,7 @@ $black-200: #1b1b1b !default;
 $black-300: #150e06 !default;
 
 $gray-100: #1a1a1a !default;
-$gray-200: #292928 !default;
+$gray-200: #292929 !default;
 $gray-300: #3f3f3f !default;
 $gray-400: #4d4d4d !default;
 
@@ -25,6 +26,7 @@ $dark-300:  $black-300 !default;
 $light:     $white-100 !default;
 $light-200: $white-200 !default;
 $light-300: $white-300 !default;
+$light-400: $white-400 !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -36,6 +38,7 @@ $theme-colors: map-merge(
     "light":      $light,
     "light-200":  $light-200,
     "light-300":  $light-300,
+    "light-400":  $light-400,
     "gray-100":   $gray-100,
     "gray-200":   $gray-200,
     "gray-300":   $gray-300,
