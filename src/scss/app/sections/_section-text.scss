@@ -21,6 +21,10 @@ section h1{
       text-transform: uppercase;
       margin-top: .45rem;
     }
+
+    &.ln{
+      line-height: 1.875rem !important;
+    }
   }
 
   @include media-breakpoint-down(xs) {
@@ -34,6 +38,15 @@ section h1{
       }
     }
   }
+}
+
+section h5 {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size;
+  font-weight: bold;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
 }
 
 section p{
