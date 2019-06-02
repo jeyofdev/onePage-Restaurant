@@ -9,6 +9,7 @@ $white-300: #eeeeee !default;
 $black:     #000 !default;
 $black-100: #121212 !default;
 $black-200: #1b1b1b !default;
+$black-300: #150e06 !default;
 
 $gray-100: #1a1a1a !default;
 $gray-200: #292928 !default;
@@ -20,6 +21,7 @@ $primary: $orange !default;
 $secondary: $orange !default;
 $dark:      $black-100 !default;
 $dark-200:  $black-200 !default;
+$dark-300:  $black-300 !default;
 $light:     $white-100 !default;
 $light-200: $white-200 !default;
 $light-300: $white-300 !default;
@@ -30,6 +32,7 @@ $theme-colors: map-merge(
     "primary":    $primary,
     "dark":       $dark,
     "dark-200":   $dark-200,
+    "dark-300":   $dark-300,
     "light":      $light,
     "light-200":  $light-200,
     "light-300":  $light-300,
