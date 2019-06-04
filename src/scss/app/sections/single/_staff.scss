@@ -1,0 +1,128 @@
+/* ================
+    STAFF INTRO
+================ */
+.section-staff .intro{
+  line-height: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+@include media-breakpoint-up(lg) {
+  .section-staff .intro{
+    margin-top: 3.125rem;
+    margin-bottom: 6.25rem;
+  }
+}
+
+
+
+
+/* =========================
+    STAFF CONTENT BLOCK
+========================= */
+.section-staff .row {
+  @include flex(stretch, center);
+
+  .card {
+    margin-bottom: 1.875rem;
+    border: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-height: 350px) and (max-width: 578px) {
+  .section-staff .row .card {
+    max-width: 180px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .section-staff .row {
+    @include flex(stretch, space-between);
+
+    .card {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .section-staff .row .card {
+    max-width: 250px;
+  }
+}
+
+
+
+
+/* ===================
+    STAFF CONTENT
+=================== */
+.section-staff .row .card{
+  .card-body {
+    padding-top: 1.875rem;
+    padding-bottom: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .section-staff .row .card .card-body {
+    padding-top: 3.125rem;
+  }
+}
+
+
+
+
+/* ================
+    STAFF TEXT
+================ */
+.section-staff .row .card .card-body {
+  h5 {
+    margin-bottom: 0;
+  }
+
+  p {
+    line-height: 1.125rem;
+    margin-bottom: 0;
+
+    &.description {
+    line-height: 1.5625rem;
+    }
+  }
+}
+
+
+
+/* ==============
+    STAFF RS
+============== */
+.section-staff .row .card .card-body .staff-social{
+  margin: 1.875rem 0;
+
+  ul {
+    @include flex(center, center);
+    padding: 0;
+
+    li {
+      margin-right: 1.25rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        font-size: $font-size-base;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .section-staff .row .card .card-body .staff-social{
+    margin: 2.8125rem 0;
+  }
+}
