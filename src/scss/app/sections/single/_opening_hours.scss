@@ -1,0 +1,81 @@
+/* ===================
+    ABOUT SECTION
+=================== */
+.section-opening-hours {
+  @include backgroundImage('../img/bg-hours-big.jpg', no-repeat, center top, cover);
+}
+
+
+
+
+/* =================================
+    OPENING HOURS CONTENT BLOCK
+================================= */
+.section-opening-hours .row {
+  @include flex(stretch, center);
+  margin: 0;
+  margin-top: 4rem;
+}
+
+@include media-breakpoint-up(lg) {
+  .section-opening-hours .row {
+    margin-top: 6.25rem;
+  }
+}
+
+.section-opening-hours .row {
+  .opening-deco {
+    display: none;
+    background-color: $gray-300;
+    @include backgroundImage('../img/opening-hours/opening-hours-1.jpg', no-repeat, center, cover);
+  }
+
+  .opening-content {
+    padding: .625rem;
+    max-width: 400px;
+
+    .opening-text {
+      @include flex(center, center);
+      flex-direction: column;
+      padding: 3.125rem 1.5625rem;
+      border: 1px solid $gray-500;
+
+      .content:first-child {
+        margin-bottom: 2.8125rem;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .section-opening-hours .row {
+    .opening-deco {
+      display: block;
+    }
+
+    .opening-content .opening-text {
+      padding: 3.75rem 3rem;
+    }
+  }
+}
+
+
+
+
+/* ========================
+    OPENING HOURS TEXT
+======================== */
+.section-opening-hours .row .opening-text {
+  h5 {
+    margin-bottom: 0;
+  }
+
+  p {
+    line-height: 1.5625rem;
+    margin: .9375rem 0 0;
+
+    > span {
+      display: block;
+    }
+  }
+}

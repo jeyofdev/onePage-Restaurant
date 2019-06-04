@@ -4,13 +4,13 @@
 .section-dishes .intro{
   line-height: 1.5rem;
   margin-top: 2.5rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
 }
 
 @include media-breakpoint-up(lg) {
   .section-dishes .intro{
     margin-top: 3.125rem;
-    margin-bottom: 5.625rem;
+    margin-bottom: 6.25rem;
   }
 }
 
