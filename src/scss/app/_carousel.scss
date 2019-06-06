@@ -1,0 +1,57 @@
+/* ===============
+    CAROUSEL
+=============== */
+.custom-carousel {
+  overflow: hidden;
+}
+
+
+
+
+/* ======================
+    CAROUSEL CONTROL
+====================== */
+.custom-carousel .carousel .carousel-control {
+  position: absolute;
+  width: 100%;
+
+  > a {
+    position: relative;
+    background: transparent;
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+
+
+
+/* ====================
+    CAROUSEL DOTS
+==================== */
+.custom-carousel .carousel .carousel-indicators {
+  @include flex(center);
+  margin: 1rem 0 2rem 0;
+
+  li {
+    background: transparent;
+    opacity: 1;
+
+    &.active {
+      background: $primary;
+    }
+  }
+}
+
+
+
+
+/* ======================
+    CAROUSEL CONTENT
+====================== */
+.custom-carousel  .carousel .carousel-inner .carousel-item {
+  .carousel-caption {
+    width: auto;
+    bottom: auto;
+  }
+}

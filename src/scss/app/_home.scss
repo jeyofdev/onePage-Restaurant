@@ -29,10 +29,6 @@ header {
 /* ===============
     CAROUSEL
 =============== */
-header .home-carousel {
-  overflow: hidden;
-}
-
 header .home-carousel .carousel {
   @include flex(center);
   height:  $header-min-height;
@@ -76,16 +72,10 @@ header .home-carousel .carousel .carousel-inner .carousel-item {
     CAROUSEL CONTROL
 ====================== */
 header .home-carousel .carousel .carousel-control {
-  position: absolute;
   @include flex(stretch, space-between);
-  width: 100%;
 
   > a {
-    position: relative;
-    background: transparent;
     font-size: $carousel-control-link-font-size;
-    opacity: 1;
-    cursor: pointer;
 
     span{
       text-shadow: 0.25px 0.5px 0px $black;
@@ -99,19 +89,13 @@ header .home-carousel .carousel .carousel-control {
     CAROUSEL DOTS
 ==================== */
 header .home-carousel .carousel .carousel-indicators {
-  margin: 1rem 0 2rem 0;
-  @include flex(center);
-
   li {
-    background: transparent;
     width: $carousel-indicators-li-size;
     height: $carousel-indicators-li-size;
     border: 2px solid $white;
     border-radius: 100%;
-    opacity: 1;
 
     &.active {
-      background: $primary;
       width: $carousel-indicators-li-active-size;
       height: $carousel-indicators-li-active-size;
       border: none;
@@ -131,8 +115,6 @@ header .home-carousel .carousel .carousel-inner .carousel-item {
     @include flex(center);
 
     .carousel-caption {
-      width: auto;
-      bottom: auto;
       padding-left: 0;
       padding-right: 0;
       left: 11.5%;
