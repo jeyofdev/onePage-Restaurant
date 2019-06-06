@@ -1,0 +1,169 @@
+/* ======================
+    TESTIMONIAL DECO
+====================== */
+.section-testimonial .deco {
+  margin-top: 2.5rem;
+  margin-bottom: 2.1875rem;
+}
+
+@include media-breakpoint-up(lg) {
+  .section-testimonial .deco {
+    margin-top: 3.125rem;
+    margin-bottom: 2.8125rem;
+  }
+}
+
+
+
+/* ==========================
+    TESTIMONIAL CAROUSEL
+========================== */
+.section-testimonial .testimonial-carousel {
+  overflow: hidden;
+}
+
+.section-testimonial .testimonial-carousel .carousel {
+  @include flex(center, center);
+}
+
+
+
+
+/* ==================================
+    TESTIMONIAL CAROUSEL CONTROL
+================================== */
+.section-testimonial .testimonial-carousel .carousel .carousel-control {
+  position: absolute;
+  @include flex(center, space-between);
+  width: 100%;
+  margin-top: calc(-0.938rem - 1rem - 2rem - 3.25rem);
+
+  > a {
+    position: relative;
+    background: transparent;
+    font-size: .6875rem;
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .section-testimonial .testimonial-carousel .carousel .carousel-control > a {
+    width: 5%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 991px) and (max-height: 450px) {
+  .section-testimonial .testimonial-carousel .carousel .carousel-control > a {
+    width: 1%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .section-testimonial .testimonial-carousel .carousel .carousel-control {
+    position: absolute;
+    @include flex(center, space-between);
+    width: 100%;
+    margin-top: calc(-0.938rem - 1rem - 2rem - 4rem);
+  }
+}
+
+
+
+
+/* ===============================
+    TESTIMONIAL CAROUSEL DOTS
+=============================== */
+.section-testimonial .testimonial-carousel .carousel .carousel-indicators {
+  margin: 1rem 0 2rem 0;
+  @include flex(center);
+
+  li {
+    background: transparent;
+    width: 7px;
+    height: 7px;
+    border: 1px solid $primary;
+    opacity: 1;
+
+    &.active {
+      background: $primary;
+      border-color: $primary;
+    }
+  }
+}
+
+
+
+
+/* ==================================
+    TESTIMONIAL CAROUSEL CONTENT
+================================== */
+.section-testimonial .testimonial-carousel .carousel .carousel-inner{
+  padding: 0;
+
+  .carousel-item {
+    overflow: hidden;
+
+    .carousel-caption {
+      position: relative;
+      width: auto;
+      bottom: auto;
+      padding: 0 0 3.125rem;
+      left: 0;
+      right: unset;
+    }
+  }
+}
+
+@include media-breakpoint-only(sm) {
+  .section-testimonial .testimonial-carousel .carousel .carousel-inner{
+    flex: 0 0 85%;
+    max-width: 85%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 991px) and (max-height: 450px){
+  .section-testimonial .testimonial-carousel .carousel .carousel-inner{
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+}
+
+.section-testimonial .carousel-caption {
+  p{
+    line-height: 1.5625rem;
+    margin: 0;
+  }
+
+  ul {
+    @include flex(center, center);
+    padding-left: 0;
+    margin: 1.875rem 0 2.1875rem;
+
+    li {
+      font-size: 1rem;
+    }
+  }
+
+  h5 {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 3.125rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .section-testimonial .carousel-caption {
+    ul {
+      @include flex(center, center);
+      padding-left: 0;
+      margin: 2.5rem 0 2.8125rem;
+    }
+
+    h5 {
+      margin-bottom: .25rem;
+    }
+  }
+}
