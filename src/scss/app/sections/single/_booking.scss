@@ -1,0 +1,13 @@
+/* ===================
+    BOOKING INTRO
+=================== */
+.section-booking .intro{
+  line-height: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+@include media-breakpoint-up(lg) {
+  .section-booking .intro{
+    margin: 3.125rem 0;
+  }
+}
