@@ -29,7 +29,7 @@ module.exports = (env, argv) => {
 
     // apply postcss-loader only in production mode
     if (!dev) { cssLoaders.push('postcss-loader') }
-   
+
     let config = {
         entry: {
             app: [
@@ -51,7 +51,7 @@ module.exports = (env, argv) => {
         },
         watch: dev,
         devServer: {
-            port: 9000,
+            port: 8000,
             overlay: true,
             contentBase: path.resolve(__dirname, './public')
         },
